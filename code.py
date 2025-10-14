@@ -29,5 +29,6 @@ def action(data):
     #logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
 
     # For CSV output, iterate through rows of dataframe, and yield dictionaries
-    for _, row in data.iterrows():
-        yield dict(row)
+    # for _, row in data.iterrows():
+        # yield dict(row)
+    yield data
