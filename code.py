@@ -19,13 +19,14 @@ def begin():
 # modelop.score
 def action(data):
 
-    logger.info("BEFORE SUM: data is a dataframe of shape %s", str(data.shape))
+    # logger.info("BEFORE SUM: data is a dataframe of shape %s", str(data.shape))
 
     # Add a sum column for all rows at-once
     data["row_sum"] = data["a"] + data["b"]
 
-    logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
+    # logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
     
     # For CSV output, iterate through rows of dataframe, and yield dictionaries
-    for _, row in data.iterrows():
-        yield dict(row)
+    # for _, row in data.iterrows():
+        # yield dict(row)
+    yield data
